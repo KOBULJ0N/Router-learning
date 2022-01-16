@@ -10,12 +10,17 @@ import NotFound from '../Components/NotFound';
 export const Root = () => {
   return (
     <div>
-      <Navbar />
+      <Routes>
+        <Route path='/' element={<Navbar />} />
+        <Route path='/news' element={<Navbar />} />
+        <Route path='/work' element={<Navbar />} />
+      </Routes>
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/news' element={<News />} />
         <Route path='/work' element={<Work />} />
-              <Route path='*' element={<NotFound/>} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );
